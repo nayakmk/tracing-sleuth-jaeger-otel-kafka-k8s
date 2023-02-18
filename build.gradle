@@ -39,8 +39,9 @@ dependencies {
 		exclude group: 'org.springframework.cloud', module: 'spring-cloud-sleuth-brave' //  We want to exclude the default tracer coming from Sleuth...
 	}
 	implementation 'org.springframework.cloud:spring-cloud-sleuth-otel-autoconfigure'
-	implementation 'io.opentelemetry:opentelemetry-exporter-otlp-trace'
-	implementation 'io.grpc:grpc-okhttp:1.50.0'
+	implementation "io.opentelemetry:opentelemetry-exporter-jaeger"
+	implementation 'io.grpc:grpc-netty:1.53.0'
+
 
 	implementation 'org.springdoc:springdoc-openapi-ui:1.6.14'
 
